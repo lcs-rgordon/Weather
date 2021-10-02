@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Prediction {
+struct Prediction: Identifiable {
+    
+    let id = UUID()
     
     // The precise temperature for a given prediction
     let temperature: Double

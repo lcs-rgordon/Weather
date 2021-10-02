@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var viewModel = WeatherViewModel()
+    @ObservedObject var viewModel: WeatherViewModel
     
     @State private var temperature: Double = 0.0
     
@@ -53,12 +53,13 @@ struct ContentView: View {
 
             
         }
+        .navigationTitle("Current")
         
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

@@ -9,13 +9,16 @@ import SwiftUI
 
 @main
 struct iOSApp: App {
+    
+    @StateObject private var viewModel = WeatherViewModel()
+    
     var body: some Scene {
         WindowGroup {
             
             TabView {
                 
                 NavigationView {
-                    ContentView()
+                    ContentView(viewModel: viewModel)
                 }
                 .tabItem {
                     Image(systemName: "sun.haze.fill")
@@ -23,7 +26,7 @@ struct iOSApp: App {
                 }
 
                 NavigationView {
-                    HistoryView()
+                    HistoryView(viewModel: viewModel)
                 }
                 .tabItem {
                     Image(systemName: "clock.fill")
