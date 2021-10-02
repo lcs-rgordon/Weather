@@ -68,7 +68,7 @@
 		0E82BBC92705C63A00BD6434 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				0E82BBCA2705C63A00BD6434 /* main.swift */,
+				0E8F080127088FA600FBF026 /* Views */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -99,6 +99,14 @@
 				0E82BBDF2705D8E300BD6434 /* WeatherViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0E8F080127088FA600FBF026 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0E82BBCA2705C63A00BD6434 /* main.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
