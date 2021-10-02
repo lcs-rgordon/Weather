@@ -11,7 +11,27 @@ import SwiftUI
 struct iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            TabView {
+                
+                NavigationView {
+                    ContentView()
+                }
+                .tabItem {
+                    Image(systemName: "sun.haze.fill")
+                    Text("Current")
+                }
+
+                NavigationView {
+                    HistoryView()
+                }
+                .tabItem {
+                    Image(systemName: "clock.fill")
+                    Text("History")
+                }
+
+            }
+            
         }
     }
 }
