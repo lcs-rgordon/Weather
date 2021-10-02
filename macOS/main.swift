@@ -9,8 +9,8 @@ import Foundation
 
 // MARK: Global variables (variables used below)
 
-// Create an empty list to keep track of predictions made
-var history: [Prediction] = []
+// Create the view model
+var viewModel = WeatherViewModel()
 
 // MARK: Functions
 
@@ -56,12 +56,9 @@ func menu() {
 // Show a prediction
 func showPrediction() {
 
-    // Generate a weather prediction
-    let prediction = WeatherPredictionGenerator.getPrediction()
-
-    // Save the prediction
-    history.append(prediction)
-
+    // Get latest prediction
+    let prediction = viewModel.providePrediction()
+    
     // Show the prediction
     print("")
     print("Current weather")
@@ -80,7 +77,7 @@ func showHistory() {
         Previous weather
         ----------------
         """)
-    for priorPrediction in history {
+    for priorPrediction in viewModel.history {
         print("Conditions: \t\(priorPrediction.condition.description.lowercased())")
         print("Temperature: \t\(String(format: "%.1f", arguments: [priorPrediction.temperature])) °C")
         print("Felt like: \t\t\(priorPrediction.feel.lowercased())")
