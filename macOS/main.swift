@@ -40,7 +40,7 @@ func menu() {
             showPrediction()
         case "2":
             // See history
-            continue
+            showHistory()
         case "q", "Q":
             // QUIT
             exit(0)
@@ -64,6 +64,8 @@ func showPrediction() {
 
     // Show the prediction
     print("")
+    print("Current weather")
+    print("---------------")
     print("Current conditions are \(prediction.condition.description.lowercased()) with a temperature of \(String(format: "%.1f", arguments: [prediction.temperature])) °C.")
 
     print("That's \(prediction.feel.lowercased())!")
@@ -72,6 +74,21 @@ func showPrediction() {
 }
 
 // Show the history of predictions
+func showHistory() {
+    
+    print("""
+        Previous weather
+        ----------------
+        """)
+    for priorPrediction in history {
+        print("Conditions: \t\(priorPrediction.condition.description.lowercased())")
+        print("Temperature: \t\(String(format: "%.1f", arguments: [priorPrediction.temperature])) °C")
+        print("Felt like: \t\t\(priorPrediction.feel.lowercased())")
+        print("")
+    }
+    
+    
+}
 
 
 // MARK: Main part of program
