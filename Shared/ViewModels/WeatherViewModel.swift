@@ -7,10 +7,10 @@
 
 import Foundation
 
-class WeatherViewModel {
+class WeatherViewModel: ObservableObject {
     
     // Create an empty list to keep track of predictions made
-    var history: [Prediction] = []
+    @Published var history: [Prediction] = []
 
     // Give a predicction
     func providePrediction() -> Prediction {
