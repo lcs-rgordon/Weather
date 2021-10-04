@@ -23,6 +23,11 @@
 		0E8F081827088FFE00FBF026 /* WeatherPredictionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBD92705CC7500BD6434 /* WeatherPredictionGenerator.swift */; };
 		0E8F081927088FFE00FBF026 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBDF2705D8E300BD6434 /* WeatherViewModel.swift */; };
 		0E8F081B2708905400FBF026 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8F081A2708905400FBF026 /* HistoryView.swift */; };
+		811DDA51270B15350003CE86 /* CelsiusTemperatureRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBD52705C6CF00BD6434 /* CelsiusTemperatureRange.swift */; };
+		811DDA52270B15350003CE86 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBD72705C87F00BD6434 /* Prediction.swift */; };
+		811DDA53270B15350003CE86 /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBDB2705CCC400BD6434 /* WeatherCondition.swift */; };
+		811DDA54270B15350003CE86 /* WeatherPredictionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBD92705CC7500BD6434 /* WeatherPredictionGenerator.swift */; };
+		811DDA55270B15350003CE86 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E82BBDF2705D8E300BD6434 /* WeatherViewModel.swift */; };
 		81E36E95270B14AD000612BE /* watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 81E36E94270B14AD000612BE /* watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		81E36E9A270B14AE000612BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81E36E99270B14AE000612BE /* Assets.xcassets */; };
 		81E36EA0270B14AE000612BE /* watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 81E36E9F270B14AE000612BE /* watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -466,6 +471,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				811DDA51270B15350003CE86 /* CelsiusTemperatureRange.swift in Sources */,
+				811DDA52270B15350003CE86 /* Prediction.swift in Sources */,
+				811DDA53270B15350003CE86 /* WeatherCondition.swift in Sources */,
+				811DDA54270B15350003CE86 /* WeatherPredictionGenerator.swift in Sources */,
+				811DDA55270B15350003CE86 /* WeatherViewModel.swift in Sources */,
 				81E36EA7270B14AE000612BE /* WeatherApp.swift in Sources */,
 				81E36EA5270B14AE000612BE /* ContentView.swift in Sources */,
 				81E36EA9270B14AE000612BE /* ComplicationController.swift in Sources */,
