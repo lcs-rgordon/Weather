@@ -26,7 +26,6 @@ struct HistoryView: View {
                     .font(.title3)
             }
         }
-        .padding()
         .navigationTitle("History")
 
     }
