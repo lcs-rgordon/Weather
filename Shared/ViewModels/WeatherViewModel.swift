@@ -11,6 +11,17 @@ class WeatherViewModel: ObservableObject {
     
     // Create an empty list to keep track of predictions made
     @Published var history: [Prediction] = []
+    
+    init() {
+        
+        // Generate several predictions at random, this ensures some data is always showing when the app opens
+        for _ in 1...3 {
+            
+            // We don't need to use the result of these predictions right now, so we do not assign to any variable or constant, instead we "throw away" the result using the underscore syntax shown
+            _ = self.providePrediction()
+        }
+        
+    }
 
     // Give a predicction
     func providePrediction() -> Prediction {

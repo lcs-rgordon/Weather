@@ -11,12 +11,12 @@ struct ContentView: View {
     
     @ObservedObject var viewModel: WeatherViewModel
     
-    @State private var temperature: Double = 0.0
+    @State var temperature: Double
     
-    @State private var feel: String = ""
+    @State var feel: String
 
-    @State private var conditions: String = ""
-
+    @State var conditions: String
+    
     var body: some View {
 
         VStack {
