@@ -24,7 +24,15 @@ struct ContentView: View {
             Spacer()
             
             Text("\(conditions)")
+            // Use compiler directives to adjust the size of the Text view on different platforms
+            // READ MORE: https://www.swiftbysundell.com/articles/using-compiler-directives-in-swift/
+            #if os(iOS)
+                // Compiled only for the iOS target
                 .font(.title)
+            #else
+                // watchOS target gets this
+                .font(.title2)
+            #endif
 
             Text("\(String(format: "%.1f", arguments: [temperature])) °C")
                 .font(.largeTitle)
