@@ -32,8 +32,18 @@ struct HistoryView: View {
     }
 }
 
-//struct HistoryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HistoryView()
-//    }
-//}
+struct HistoryView_Previews: PreviewProvider {
+
+    // Create an instance of the view model to populate data for the preview window
+    // NOTE: Property must be declared as static to use with Xcode Previews, a requirement of Xcode's design
+    @StateObject private static var viewModel = WeatherViewModel()
+    
+    static var previews: some View {
+        // NOTE: Navigation view is needed to present the title that shows in the actual UI
+        //       Recall that in the app entry point, we wrap the HistoryView instance in a NavigationView structure.
+        NavigationView {
+            HistoryView(viewModel: viewModel)
+        }
+    }
+    
+}

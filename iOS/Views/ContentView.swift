@@ -58,8 +58,18 @@ struct ContentView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    
+    // Create an instance of the view model to populate data for the preview window
+    // NOTE: Property must be declared as static to use with Xcode Previews, a requirement of Xcode's design
+    @StateObject private static var viewModel = WeatherViewModel()
+    
+    static var previews: some View {
+        NavigationView {
+            ContentView(viewModel: viewModel,
+                        temperature: viewModel.history.last!.temperature,
+                        feel: viewModel.history.last!.feel,
+                        conditions: viewModel.history.last!.condition.description)
+        }
+    }
+}
